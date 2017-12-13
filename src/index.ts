@@ -1,10 +1,6 @@
-export function demo(){
-    return new Promise((s)=>{
-        s("hello, world");
-    });
-}
+import { demo } from './demo';
 
-async function run(){
+async function run() {
     console.log(await demo());
 }
 

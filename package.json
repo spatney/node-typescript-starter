@@ -6,8 +6,10 @@
   "scripts": {
     "test": "nf run nodemon -- --config nodemon.test.json",
     "test:single": "ts-node test/runner.ts",
+    "test:cover": "ts-node node_modules/istanbul/lib/cli cover test/runner.ts",
     "start": "nf run nodemon",
     "start:build": "node ./dist/src/index.js",
+    "code-coverage": "istanbul check-coverage",
     "build": "tsc"
   },
   "author": "",
@@ -16,8 +18,10 @@
     "@types/jasmine": "^2.8.2",
     "@types/jasmine-node": "^1.14.32",
     "foreman": "^2.0.0",
+    "istanbul": "^1.1.0-alpha.1",
     "jasmine": "^2.8.0",
     "jasmine-node": "^1.14.5",
+    "minimist": "^1.2.0",
     "nodemon": "^1.12.5",
     "ts-node": "^4.0.1",
     "typescript": "^2.6.2"
